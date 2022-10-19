@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:third_project/Screen/tabsScreen.dart';
 import '../Screen/meal_details_screen.dart';
 import 'Screen/CategoriesMealsScreen.dart';
 import 'Screen/categories_screen.dart';
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "DailyMeals",
       theme: ThemeData(
           brightness: Brightness.light,
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
                 ),
                 body2: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
               )),
-      home: CategoriesScreen(),
+      home: TabsScreen(),
       routes: {
         CategoriesMealsScreen.RouteName: (ctx) => CategoriesMealsScreen(),
         MealDetailScreen.RouteName: (ctx) => MealDetailScreen(),
