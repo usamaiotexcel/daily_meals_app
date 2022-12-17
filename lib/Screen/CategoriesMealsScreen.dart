@@ -49,18 +49,25 @@ class _CategoryMealsScreenState extends State<CategoriesMealsScreen> {
       appBar: AppBar(
         title: Text(categoryTitle!),
       ),
-      body: ListView.builder(
-        itemBuilder: (ctx, index) {
-          return MealItem(
-            id: displayedMeals![index].id,
-            title: displayedMeals![index].title,
-            imageUrl: displayedMeals![index].imageUrl,
-            duration: displayedMeals![index].duration,
-            affordability: displayedMeals![index].affordability,
-            complexity: displayedMeals![index].complexity,
-          );
-        },
-        itemCount: displayedMeals!.length,
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [Colors.lightBlue, Colors.white],
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft)),
+        child: ListView.builder(
+          itemBuilder: (ctx, index) {
+            return MealItem(
+              id: displayedMeals![index].id,
+              title: displayedMeals![index].title,
+              imageUrl: displayedMeals![index].imageUrl,
+              duration: displayedMeals![index].duration,
+              affordability: displayedMeals![index].affordability,
+              complexity: displayedMeals![index].complexity,
+            );
+          },
+          itemCount: displayedMeals!.length,
+        ),
       ),
     );
   }
