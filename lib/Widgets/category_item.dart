@@ -15,22 +15,39 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => selectCategory(context),
-      splashColor: Theme.of(context).primaryColor,
-      borderRadius: BorderRadius.circular(15),
-      child: Container(
-        padding: const EdgeInsets.all(15),
-        child: Text(
-          title,
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+    return Container(
+      decoration: BoxDecoration(
+          border: Border.all(width: 2, color: Colors.white),
+          borderRadius: BorderRadius.circular(16)),
+      child: InkWell(
+        onTap: () => selectCategory(context),
+        splashColor: Theme.of(context).primaryColor,
+        borderRadius: BorderRadius.circular(15),
+        child: Container(
+          padding: const EdgeInsets.all(15),
+          child: Column(
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
+              ),
+              Icon(
+                Icons.fastfood,
+                size: 30,
+                color: Colors.white,
+              )
+            ],
+          ),
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [color.withOpacity(0.7), color],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight),
+              borderRadius: BorderRadius.circular(15)),
         ),
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [color.withOpacity(0.7), color],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight),
-            borderRadius: BorderRadius.circular(15)),
       ),
     );
   }

@@ -19,7 +19,8 @@ class MealDetailScreen extends StatelessWidget {
   Widget buildContainer(Widget child) {
     return Container(
         decoration: BoxDecoration(
-            color: Colors.pink, border: Border.all(color: Colors.black)),
+            color: Colors.pink,
+            border: Border.all(color: Colors.black, width: 2)),
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
         height: 150,
@@ -57,9 +58,12 @@ class MealDetailScreen extends StatelessWidget {
                 ListView.builder(
                   itemBuilder: (ctx, index) => Card(
                     color: Colors.black,
-                    child: Text(
-                      selectedMeal.ingredients[index],
-                      style: TextStyle(color: Colors.white),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        selectedMeal.ingredients[index],
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                   itemCount: selectedMeal.ingredients.length,
@@ -72,6 +76,7 @@ class MealDetailScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: CircleAvatar(
+                          backgroundColor: Colors.black,
                           child: Text(
                             '# ${index + 1}',
                             style: TextStyle(
@@ -81,7 +86,7 @@ class MealDetailScreen extends StatelessWidget {
                         ),
                         title: Text(
                           selectedMeal.steps[index],
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                       ),
                       Divider(),

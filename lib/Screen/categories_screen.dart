@@ -8,6 +8,7 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("DailyMeals"),
+        leading: Icon(Icons.food_bank_outlined),
       ),
       body: Container(
         decoration: BoxDecoration(
