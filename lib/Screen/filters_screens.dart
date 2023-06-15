@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:third_project/Screen/categories_screen.dart';
+import 'package:third_project/Screen/tabsScreen.dart';
 import '/Widgets/main_Drawer.dart';
 
 class FiltersScreen extends StatefulWidget {
@@ -56,6 +58,9 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 'vegetarian': _vegetarian,
               };
               widget.saveFilters(selectedFilters);
+              final snackBar =
+                  SnackBar(content: Text('Your filter is been applied!'));
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
             },
             icon: Icon(Icons.save))
       ]),
