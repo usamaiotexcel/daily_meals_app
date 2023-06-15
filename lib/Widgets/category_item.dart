@@ -35,7 +35,7 @@ class CategoryItem extends StatelessWidget {
                     fontSize: 15),
               ),
               Icon(
-                Icons.fastfood,
+                Icons.dinner_dining,
                 size: 30,
                 color: Colors.white,
               )
