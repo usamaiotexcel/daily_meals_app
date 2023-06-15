@@ -19,7 +19,7 @@ class MealDetailScreen extends StatelessWidget {
   Widget buildContainer(Widget child) {
     return Container(
         decoration: BoxDecoration(
-            color: Colors.pink,
+            color: Colors.white,
             border: Border.all(color: Colors.black, width: 2)),
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
@@ -89,7 +89,10 @@ class MealDetailScreen extends StatelessWidget {
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
-                      Divider(),
+                      Divider(
+                        color: Colors.black,
+                        thickness: 2,
+                      ),
                     ],
                   ),
                   itemCount: selectedMeal.steps.length,
