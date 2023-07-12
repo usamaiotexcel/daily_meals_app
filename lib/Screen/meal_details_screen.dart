@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../Dummy_Data.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MealDetailScreen extends StatelessWidget {
   static const RouteName = '/meals-details';
@@ -32,6 +33,12 @@ class MealDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final mealId = ModalRoute.of(context)!.settings.arguments;
     final selectedMeal = DUMMY_MEALS.firstWhere((meal) => meal.id == mealId);
+
+    Future<void> lauchVideo() async {
+      var url = selectedMeal.videoUrl;
+      await launch(url);
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('${selectedMeal.title}'),
@@ -52,6 +59,15 @@ class MealDetailScreen extends StatelessWidget {
                   selectedMeal.imageUrl,
                   fit: BoxFit.cover,
                 ),
+              ),
+              SizedBox(
+                width: 350,
+                child: ElevatedButton(
+                    onPressed: () => lauchVideo(),
+                    child: Text(
+                      'Click to get recipe video',
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    )),
               ),
               buildSectionTitle(context, 'Ingredients'),
               buildContainer(
@@ -97,7 +113,7 @@ class MealDetailScreen extends StatelessWidget {
                   ),
                   itemCount: selectedMeal.steps.length,
                 ),
-              )
+              ),
             ],
           ),
         ),

@@ -91,6 +91,7 @@ const DUMMY_MEALS = const [
     isVegan: true,
     isVegetarian: true,
     isLactoseFree: true,
+    videoUrl: 'https://www.youtube.com/watch?v=jBoMTZIHqLc',
   ),
   Meal(
     id: 'm2',
@@ -119,6 +120,7 @@ const DUMMY_MEALS = const [
     isVegan: false,
     isVegetarian: false,
     isLactoseFree: false,
+    videoUrl: 'https://www.youtube.com/watch?v=NxWz3Hyx0Ds',
   ),
   Meal(
     id: 'm3',
@@ -151,6 +153,7 @@ const DUMMY_MEALS = const [
     isVegan: false,
     isVegetarian: false,
     isLactoseFree: true,
+    videoUrl: 'https://www.youtube.com/watch?v=foD42-73wdI',
   ),
   Meal(
     id: 'm4',
@@ -186,6 +189,7 @@ const DUMMY_MEALS = const [
     isVegan: false,
     isVegetarian: false,
     isLactoseFree: false,
+    videoUrl: 'https://www.youtube.com/watch?v=6nZqiWHGjMg',
   ),
   Meal(
     id: 'm5',
@@ -222,6 +226,7 @@ const DUMMY_MEALS = const [
     isVegan: false,
     isVegetarian: true,
     isLactoseFree: true,
+    videoUrl: 'https://www.youtube.com/watch?v=r8GYWse8mtg',
   ),
   Meal(
     id: 'm6',
@@ -258,6 +263,7 @@ const DUMMY_MEALS = const [
     isVegan: false,
     isVegetarian: true,
     isLactoseFree: false,
+    videoUrl: 'https://www.youtube.com/watch?v=ba_3ICebDoo',
   ),
   Meal(
     id: 'm7',
@@ -289,6 +295,7 @@ const DUMMY_MEALS = const [
     isVegan: false,
     isVegetarian: true,
     isLactoseFree: false,
+    videoUrl: 'https://www.youtube.com/watch?v=NCMKedZvnyI',
   ),
   Meal(
     id: 'm8',
@@ -322,6 +329,7 @@ const DUMMY_MEALS = const [
     isVegan: false,
     isVegetarian: false,
     isLactoseFree: true,
+    videoUrl: 'https://www.youtube.com/watch?v=gXpiGKf7ixA',
   ),
   Meal(
     id: 'm9',
@@ -371,6 +379,7 @@ const DUMMY_MEALS = const [
     isVegan: false,
     isVegetarian: true,
     isLactoseFree: false,
+    videoUrl: 'https://www.youtube.com/watch?v=XbO_qCNea3A',
   ),
   Meal(
     id: 'm10',
@@ -405,6 +414,7 @@ const DUMMY_MEALS = const [
     isVegan: true,
     isVegetarian: true,
     isLactoseFree: true,
+    videoUrl: 'https://www.youtube.com/shorts/5g1mutuVtl4',
   ),
   Meal(
       id: 'm11',
@@ -448,7 +458,8 @@ const DUMMY_MEALS = const [
       isGlutenFree: true,
       isLactoseFree: true,
       isVegan: true,
-      isVegetarian: false),
+      isVegetarian: false,
+      videoUrl: 'https://www.youtube.com/watch?v=a03U45jFxOI'),
   Meal(
       id: 'm12',
       categories: [
@@ -488,9 +499,10 @@ const DUMMY_MEALS = const [
       complexity: Complexity.Simple,
       affordability: Affordability.Pricey,
       isGlutenFree: true,
-      isLactoseFree: false,
+      isLactoseFree: true,
       isVegan: false,
-      isVegetarian: true),
+      isVegetarian: true,
+      videoUrl: 'https://www.youtube.com/watch?v=jODnSnhbIbQ'),
   Meal(
       id: 'm13',
       categories: [
@@ -540,11 +552,12 @@ const DUMMY_MEALS = const [
         'Then top the usal with chopped coriander leaves.',
         ' Serve a side of some lemon wedges, chopped onions and mix farsan/sev/chiwda. Serve the Misal in a bowl or a plate with pav buns. You can also serve misal with a side of buttermilk (chass) or curd (yogurt) as it balances the spiciness of the usal'
       ],
-      duration: 30,
+      duration: 25,
       complexity: Complexity.Simple,
       affordability: Affordability.Pricey,
       isGlutenFree: true,
-      isLactoseFree: false,
+      isLactoseFree: true,
       isVegan: false,
-      isVegetarian: true),
+      isVegetarian: true,
+      videoUrl: 'https://www.youtube.com/watch?v=R1AfI17BzZs'),
 ];
